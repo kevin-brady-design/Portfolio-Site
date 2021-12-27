@@ -22,6 +22,15 @@ Secondary Color (Dark Blue): #092A3F
 Tiertary Color (Light Blue): #0c3854;
 White Color (White Smoke): #F4F4F4
 */
+
+.center {
+  text-align: center;
+}
+
+#button {
+  text-align: center;
+}
+
 body {
   font-family: 'Outfit', sans-serif;
   font-size: 16px;
@@ -37,16 +46,19 @@ h1, h2, h3, h4 {
 h1 {
   font-size: 2em;
   font-weight: 700;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.6em;
   font-weight: 700;
+  text-align: center;
 }
 
 h3 {
   font-size: 1.3em;
   font-weight: 400;
+  text-align: center;
 }
 
 h4 {
@@ -80,6 +92,7 @@ a:focus {
 
 a:active {
   color: #092a3f;
+  text-decoration: underline;
 }
 
 a.button {
@@ -115,6 +128,7 @@ a.button {
 }
 
 /* Layout styling */
+
 .container {
   padding: 0 15px;
 }
@@ -136,12 +150,10 @@ a.button {
 
 #hero h1 {
   text-align: center;
-  /* Centers text */
 }
 
 #hero p {
   text-align: center;
-  /* Centers text */
 }
 
 .logo {
@@ -192,6 +204,16 @@ nav>ul>li>a:active {
   width: 100%;
 }
 
+ul>li {
+  list-style-type: none;
+  padding: 0;
+}
+
 main {
   padding-top: 100px;
 }
+
+footer {
+  background-color: #f4f4f4;
+  padding: 10px 0;
+  text-align: center;
