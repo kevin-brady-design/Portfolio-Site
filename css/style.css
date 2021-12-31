@@ -26,10 +26,6 @@ White Color (White Smoke): #F4F4F4
   text-align: center;
 }
 
-#button {
-  text-align: center;
-}
-
 body {
   font-family: 'Outfit', sans-serif;
   font-size: 16px;
@@ -57,7 +53,7 @@ h2 {
 h3 {
   font-size: 1.3em;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
 }
 
 h4 {
@@ -69,13 +65,15 @@ img {
   width: 100%;
 }
 
+/* links */
 a {
-  color: #0c3854;
+  color: #092a3f;
   /* default link color */
   text-decoration: none;
 }
 
 a:visited {
+  /* only affects logo */
   color: #0c3854;
 }
 
@@ -85,8 +83,9 @@ a:hover {
 }
 
 a:focus {
+  /* affects logo */
   color: #092a3f;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:active {
@@ -94,29 +93,33 @@ a:active {
   text-decoration: underline;
 }
 
+/* main section buttons */
 a.button {
-  display: inline-block;
+  display: block;
   /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #092A3F;
-  color: #ffffff;
+  color: white;
   /* needed to override the default link color */
   font-weight: 400;
   padding: 10px;
-  border-radius: 20px;
-  border-bottom: 2px solid #092A3F;
-  /* width of the border, type, color */
-  transition: 0.2s opacity;
+  border-radius: 25px;
+  text-align: center;
+  border: 2px solid #092A3F
+    /* width of the border, type, color */
 }
 
 .button:hover {
-  opacity: 0.8;
-  /* Reduces the opacity of the button to 80% */
+  background-color: transparent;
+  color: #092A3F;
   text-decoration: none;
 }
 
+/* footer section buttons */
 .button.contact {
+  display: inline-block;
   background-color: transparent;
   color: #092A3F;
+  width: 25%;
   text-transform: uppercase;
   border: 2px solid #092A3F;
 }
@@ -124,6 +127,30 @@ a.button {
 .button.contact:hover {
   background-color: #092A3F;
   color: #ffffff;
+  /* text */
+  text-decoration: none;
+}
+
+/* button transition animation */
+.button {
+  display: inline-block;
+  background-color: #092A3F;
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #092A3F;
+  transition: 0.2s opacity;
+}
+
+/* logo */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.8;
+  color: #000000;
 }
 
 /* Layout styling */
@@ -134,6 +161,14 @@ a.button {
 .row {
   margin: 25px 0;
   /* 25px top and bottom, 0 left and right */
+}
+
+.logo {
+  max-width: 250px;
+}
+
+#profilepic {
+  max-width: 600px;
 }
 
 #work .row {
@@ -154,8 +189,20 @@ a.button {
   text-align: center;
 }
 
-.logo {
-  max-width: 250px;
+#skills {
+  text-align: center;
+}
+
+#skills h3 {
+  text-align: center;
+}
+
+#tools {
+  text-align: center;
+}
+
+#tools h3 {
+  text-align: center;
 }
 
 nav>ul {
@@ -207,37 +254,131 @@ ul>li {
   padding: 0;
 }
 
+ul {
+  padding: 0;
+}
+
 main {
-  padding-top: 103px;
+  padding-top: 99px;
 }
 
 footer {
   background-color: #f4f4f4;
   padding: 10px 0;
   text-align: center;
+}
 
+/* illustraition animations */
+.berlin-illustration {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
 
-  /* ==============================
-  Medium devices (640px and larger)
-  ================================= */
-  @media only screen and (min-width: 640px) {
-    header {
-      text-align: unset;
-      padding: 20px 0 13px;
-    }
-    nav {
-      width: auto;
-      float: right;
-      margin-top: 4px;
-    }
+@keyframes color-change {
+  0% {
+    fill: #edc655;
   }
 
-  /* ==============================
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  #hero span {
+    display: block;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/* ==============================
 Large devices (1024px or larger)
 ================================= */
-  @media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-  /* ==============================
-X-large devices (1440px or larger)
-================================= */
-  @media only screen and (min-width: 1440px) {}
+  .col-lg-5 {
+    width: 40%;
+  }
+
+  .col-lg-7 {
+    width: 60%;
+  }
+}
