@@ -6,13 +6,9 @@ header {
   background-color: #f4f4f4;
   text-align: center;
   padding: 10px 0;
-  box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
   position: fixed;
   width: 100%;
-}
-
-body {
-  background-color: #ffffff
 }
 
 /*
@@ -26,12 +22,17 @@ White Color (White Smoke): #F4F4F4
   text-align: center;
 }
 
+p {
+  text-align: left;
+}
+
 body {
   font-family: 'Outfit', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
   color: #000000;
+  background-color: #ffffff;
 }
 
 h1, h2, h3, h4 {
@@ -42,6 +43,7 @@ h1 {
   font-size: 2em;
   font-weight: 700;
   text-align: center;
+  padding-top: 25px;
 }
 
 h2 {
@@ -54,26 +56,99 @@ h3 {
   font-size: 1.3em;
   font-weight: 400;
   text-align: left;
+  margin: 0;
 }
 
 h4 {
   font-size: 1.15em;
-  font-weight: 400;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 img {
   width: 100%;
 }
 
+ul {
+  padding: 0;
+  margin-top: 0;
+}
+
+ul>li {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav>ul {
+  list-style-type: none;
+  font-size: 15px;
+  padding: 0;
+}
+
+nav>ul>li {
+  display: inline-block;
+}
+
+nav>ul>li>a {
+  padding: 0 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #0c3854;
+  text-decoration: none;
+  display: block;
+  border-bottom: 3px solid transparent;
+}
+
+nav>ul>li>a:visited {
+  color: #0c3854;
+}
+
+nav>ul>li>a:hover {
+  color: #092a3f;
+  text-decoration: none;
+  border-bottom: 2px solid #092a3f;
+}
+
+nav>ul>li>a:active {
+  color: #092A3F;
+  text-decoration: none;
+}
+
+.active {
+    border-bottom: 2px solid #092a3f;
+}
+
+a.logo:hover {
+  text-decoration: none
+}
+
+main {
+  padding-top: 79px;
+}
+
+.project h2, .project h3, .project p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  background-color: #f4f4f4;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 80%;
+}
+
 /* links */
 a {
   color: #092a3f;
-  /* default link color */
   text-decoration: none;
 }
 
 a:visited {
-  /* only affects logo */
   color: #0c3854;
 }
 
@@ -83,7 +158,6 @@ a:hover {
 }
 
 a:focus {
-  /* affects logo */
   color: #092a3f;
   text-decoration: none;
 }
@@ -102,6 +176,7 @@ a.button {
   /* needed to override the default link color */
   font-weight: 400;
   padding: 10px;
+  margin-top: 25px;
   border-radius: 25px;
   text-align: center;
   border: 2px solid #092A3F
@@ -114,12 +189,29 @@ a.button {
   text-decoration: none;
 }
 
+/* prototype button */
+.button.prototype {
+  display: inline-block;
+  background-color: #092A3F;
+  color: #ffffff;
+  width: 60%;
+  text-transform: uppercase;
+  border: 2px solid #092A3F;
+}
+
+.button.prototype:hover {
+  background-color: #ffffff;
+  color: #092A3F;
+  /* text */
+  text-decoration: none;
+}
+
 /* footer section buttons */
 .button.contact {
   display: inline-block;
   background-color: transparent;
   color: #092A3F;
-  width: 25%;
+  width: 60%;
   text-transform: uppercase;
   border: 2px solid #092A3F;
 }
@@ -147,10 +239,11 @@ a.button {
 /* logo */
 .logo {
   font-family: 'Raleway', sans-serif;
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 700;
   line-height: 1.8;
   color: #000000;
+  text-decoration: none;
 }
 
 /* Layout styling */
@@ -158,21 +251,22 @@ a.button {
   padding: 0 15px;
 }
 
+.project .inner-container {
+  margin: 4em auto;
+}
+
+#contact {
+  text-align: center;
+}
+
 .row {
   margin: 25px 0;
   /* 25px top and bottom, 0 left and right */
 }
 
-.logo {
-  max-width: 250px;
-}
-
-#profilepic {
-  max-width: 600px;
-}
-
 #work .row {
-  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 50px;
   border-bottom: 1px solid #4a4a4a;
 }
 
@@ -205,43 +299,6 @@ a.button {
   text-align: center;
 }
 
-nav>ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav>ul>li {
-  display: inline-block;
-}
-
-nav>ul>li>a {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #0c3854;
-}
-
-nav>ul>li>a:visited {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #0c3854;
-}
-
-nav>ul>li>a:hover {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #092a3f;
-}
-
-nav>ul>li>a:active {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #092A3F;
-}
-
 #hero {
   background-color: #f4f4f4;
   padding: 20px 0;
@@ -249,80 +306,59 @@ nav>ul>li>a:active {
   width: 100%;
 }
 
-ul>li {
-  list-style-type: none;
-  padding: 0;
+/* I'M A UX DESIGN */
+span {
+  display: block;
+  margin-top: .5em;
+  font-size: 70%;
 }
 
-ul {
-  padding: 0;
+.col-md-1 {
+  width: 8.33%;
 }
 
-main {
-  padding-top: 99px;
+.col-md-2 {
+  width: 16.66%;
 }
 
-footer {
-  background-color: #f4f4f4;
-  padding: 10px 0;
-  text-align: center;
+.col-md-3 {
+  width: 25%;
 }
 
-/* illustraition animations */
-.berlin-illustration {
+.col-md-4 {
+  width: 33.33%;
+}
+
+.col-md-5 {
+  width: 41.66%;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+.col-md-7 {
+  width: 58.33%;
+}
+
+.col-md-8 {
+  width: 66.66%;
+}
+
+.col-md-9 {
+  width: 75%;
+}
+
+.col-md-10 {
+  width: 83.33%;
+}
+
+.col-md-11 {
+  width: 91.66%;
+}
+
+.col-md-12 {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-@keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-
-  50% {
-    fill: #fcffad;
-  }
-
-  100% {
-    fill: #f76414;
-  }
-}
-
-.sun {
-  animation: 4s color-change infinite alternate linear;
-}
-
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-.cloud-front {
-  animation-duration: 30s;
-  animation-name: cloud-move;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 /* ==============================
@@ -346,6 +382,14 @@ Medium devices (640px and larger)
 
   #hero span {
     display: block;
+  }
+
+  #profilepic img {
+    max-width: 300px;
+  }
+
+  .inner-container {
+    text-align: center;
   }
 
   .col-md-6 {
