@@ -115,7 +115,7 @@ nav>ul>li>a:active {
 }
 
 .active {
-    border-bottom: 2px solid #092a3f;
+  border-bottom: 2px solid #092a3f;
 }
 
 a.logo:hover {
@@ -244,6 +244,7 @@ a.button {
   line-height: 1.8;
   color: #000000;
   text-decoration: none;
+  max-width: 150px;
 }
 
 /* Layout styling */
@@ -405,6 +406,10 @@ Medium devices (640px and larger)
     content: "";
     clear: both;
     display: table;
+  }
+
+  .logo {
+    max-width: 250px;
   }
 }
 
