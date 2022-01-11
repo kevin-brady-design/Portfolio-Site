@@ -71,6 +71,7 @@ img {
 ul {
   padding: 0;
   margin-top: 0;
+  line-height: 44px;
 }
 
 ul>li {
@@ -130,10 +131,6 @@ nav>ul>li>a:active {
 
 .navtoggle.responsive li  {
   display: block;
-}
-
-.active {
-  border-bottom: 2px solid #092a3f;
 }
 
 a.logo:hover {
@@ -332,53 +329,7 @@ span {
   font-size: 70%;
 }
 
-.col-md-1 {
-  width: 8.33%;
-}
 
-.col-md-2 {
-  width: 16.66%;
-}
-
-.col-md-3 {
-  width: 25%;
-}
-
-.col-md-4 {
-  width: 33.33%;
-}
-
-.col-md-5 {
-  width: 41.66%;
-}
-
-.col-md-6 {
-  width: 50%;
-}
-
-.col-md-7 {
-  width: 58.33%;
-}
-
-.col-md-8 {
-  width: 66.66%;
-}
-
-.col-md-9 {
-  width: 75%;
-}
-
-.col-md-10 {
-  width: 83.33%;
-}
-
-.col-md-11 {
-  width: 91.66%;
-}
-
-.col-md-12 {
-  width: 100%;
-}
 
 /* ==============================
 Medium devices (641px and larger)
@@ -409,6 +360,10 @@ Medium devices (641px and larger)
 
   .navtoggle li:last-child {
     display: none;
+  }
+
+  .active {
+    border-bottom: 2px solid #092a3f;
   }
 
   body {
@@ -444,6 +399,54 @@ Medium devices (641px and larger)
 
   .logo {
     max-width: 250px;
+  }
+
+  .col-md-1 {
+    width: 8.33%;
+  }
+
+  .col-md-2 {
+    width: 16.66%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-md-4 {
+    width: 33.33%;
+  }
+
+  .col-md-5 {
+    width: 41.66%;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-7 {
+    width: 58.33%;
+  }
+
+  .col-md-8 {
+    width: 66.66%;
+  }
+
+  .col-md-9 {
+    width: 75%;
+  }
+
+  .col-md-10 {
+    width: 83.33%;
+  }
+
+  .col-md-11 {
+    width: 91.66%;
+  }
+
+  .col-md-12 {
+    width: 100%;
   }
 }
 
